@@ -1,0 +1,9 @@
+--- QTGNN Final Implementation ---
+Total Qubits: 8
+Nodes per Graph: 16
+Lambda_1 (Unsup): 0.1
+Lambda_2 (regularization): 0.001
+Output: Console & output.txt
+-------------------------------------------
+Loading PS_20174392719_1491204439457_log.csv...
+Generating 30 Fraud and 270 Normal graphs...
