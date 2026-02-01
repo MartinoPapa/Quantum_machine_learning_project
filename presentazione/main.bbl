@@ -1,0 +1,461 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.2 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nty/global//global/global}
+    \entry{artinterp}{article}{}
+      \name{author}{1}{}{%
+        {{hash=038241846cee2f2c5362615075ca7f15}{%
+           family={Alarfaj},
+           familyi={A\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod},
+           suffix={F.\bibnamedelimi K.\bibnamedelimi Shahzadi},
+           suffixi={F\bibinitperiod\bibinitdelim K\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+      }
+      \strng{namehash}{038241846cee2f2c5362615075ca7f15}
+      \strng{fullhash}{038241846cee2f2c5362615075ca7f15}
+      \strng{bibnamehash}{038241846cee2f2c5362615075ca7f15}
+      \strng{authorbibnamehash}{038241846cee2f2c5362615075ca7f15}
+      \strng{authornamehash}{038241846cee2f2c5362615075ca7f15}
+      \strng{authorfullhash}{038241846cee2f2c5362615075ca7f15}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Financial Data Science}
+      \field{title}{Enhancing fraud detection in banking with deep learning: Graph neural networks and autoencoders for real-time credit card fraud prevention}
+      \field{year}{2024}
+      \true{nocite}
+    \endentry
+    \entry{mainarticle}{article}{}
+      \name{author}{2}{}{%
+        {{hash=fe87d2f16f21e55086e1036cd7d874d3}{%
+           family={Doost},
+           familyi={D\bibinitperiod},
+           given={Mohammad},
+           giveni={M\bibinitperiod}}}%
+        {{hash=ee8fc74f6e6b8ad759e182b073eda969}{%
+           family={Manthouri},
+           familyi={M\bibinitperiod},
+           given={Mohammad},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{96cf2fe911b82d6cb60b6e27b52af044}
+      \strng{fullhash}{96cf2fe911b82d6cb60b6e27b52af044}
+      \strng{bibnamehash}{96cf2fe911b82d6cb60b6e27b52af044}
+      \strng{authorbibnamehash}{96cf2fe911b82d6cb60b6e27b52af044}
+      \strng{authornamehash}{96cf2fe911b82d6cb60b6e27b52af044}
+      \strng{authorfullhash}{96cf2fe911b82d6cb60b6e27b52af044}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{arXiv preprint arXiv:2512.03696}
+      \field{title}{Quantum topological graph neural networks for detecting complex fraud patterns}
+      \field{year}{2025}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/2512.03696v1
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/2512.03696v1
+      \endverb
+    \endentry
+    \entry{newHam}{article}{}
+      \name{author}{3}{}{%
+        {{hash=5e61ee12360fc49d9013fbf8fe18db89}{%
+           family={Farhi},
+           familyi={F\bibinitperiod},
+           given={Edward},
+           giveni={E\bibinitperiod}}}%
+        {{hash=f2e6b451475e084ec5469a7bd9c9c6cf}{%
+           family={Goldstone},
+           familyi={G\bibinitperiod},
+           given={Jeffrey},
+           giveni={J\bibinitperiod}}}%
+        {{hash=39d938c535d4f5974b7e118bfc075b2f}{%
+           family={Gutmann},
+           familyi={G\bibinitperiod},
+           given={Sam},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{20254ebc49b7f7e3467958f0e39320cd}
+      \strng{fullhash}{20254ebc49b7f7e3467958f0e39320cd}
+      \strng{bibnamehash}{20254ebc49b7f7e3467958f0e39320cd}
+      \strng{authorbibnamehash}{20254ebc49b7f7e3467958f0e39320cd}
+      \strng{authornamehash}{20254ebc49b7f7e3467958f0e39320cd}
+      \strng{authorfullhash}{20254ebc49b7f7e3467958f0e39320cd}
+      \field{sortinit}{F}
+      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{quant-ph}
+      \field{eprinttype}{arXiv}
+      \field{title}{A Quantum Approximate Optimization Algorithm}
+      \field{year}{2014}
+      \true{nocite}
+      \verb{eprint}
+      \verb 1411.4028
+      \endverb
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/1411.4028
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/1411.4028
+      \endverb
+    \endentry
+    \entry{artHdaib}{article}{}
+      \name{author}{2}{}{%
+        {{hash=b1eddd272ed532c678ccc43402fe8119}{%
+           family={M.},
+           familyi={M\bibinitperiod},
+           given={Hdaib},
+           giveni={H\bibinitperiod}}}%
+        {{hash=fa534c8dc2df1900921c2a1dced023fd}{%
+           family={Rajasegarar},
+           familyi={R\bibinitperiod},
+           given={L.},
+           giveni={L\bibinitperiod},
+           suffix={S.\bibnamedelimi Pan},
+           suffixi={S\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+      }
+      \strng{namehash}{8b64e1242b08a71cfdbba3d8d367ded9}
+      \strng{fullhash}{8b64e1242b08a71cfdbba3d8d367ded9}
+      \strng{bibnamehash}{8b64e1242b08a71cfdbba3d8d367ded9}
+      \strng{authorbibnamehash}{8b64e1242b08a71cfdbba3d8d367ded9}
+      \strng{authornamehash}{8b64e1242b08a71cfdbba3d8d367ded9}
+      \strng{authorfullhash}{8b64e1242b08a71cfdbba3d8d367ded9}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Quantum Machine Intelligence}
+      \field{number}{1}
+      \field{title}{Quantum deep learning-based anomaly detection for enhanced network security}
+      \field{volume}{6}
+      \field{year}{2024}
+      \true{nocite}
+    \endentry
+    \entry{artTDA}{article}{}
+      \name{author}{1}{}{%
+        {{hash=279ac986365dba7f27e43539e6f18ffc}{%
+           family={Monkam},
+           familyi={M\bibinitperiod},
+           given={M.\bibnamedelimi J.\bibnamedelimi Bastian\bibnamedelimb N.\bibnamedelimi D.},
+           giveni={M\bibinitperiod\bibinitdelim J\bibinitperiod\bibinitdelim B\bibinitperiod\bibinitdelim N\bibinitperiod\bibinitdelim D\bibinitperiod},
+           suffix={G.\bibnamedelimi F.\bibnamedelimi De\bibnamedelima Lucia},
+           suffixi={G\bibinitperiod\bibinitdelim F\bibinitperiod\bibinitdelim D\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+      }
+      \strng{namehash}{279ac986365dba7f27e43539e6f18ffc}
+      \strng{fullhash}{279ac986365dba7f27e43539e6f18ffc}
+      \strng{bibnamehash}{279ac986365dba7f27e43539e6f18ffc}
+      \strng{authorbibnamehash}{279ac986365dba7f27e43539e6f18ffc}
+      \strng{authornamehash}{279ac986365dba7f27e43539e6f18ffc}
+      \strng{authorfullhash}{279ac986365dba7f27e43539e6f18ffc}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Computers Security}
+      \field{number}{144}
+      \field{title}{A topological data analysis approach for detecting data poisoning attacks against machine learning based network intrusion detection systems}
+      \field{year}{2024}
+      \true{nocite}
+    \endentry
+    \entry{artmotie}{article}{}
+      \name{author}{1}{}{%
+        {{hash=1f7d646c7dcb0fb589f61d05911cad48}{%
+           family={Motie},
+           familyi={M\bibinitperiod},
+           given={B.},
+           giveni={B\bibinitperiod},
+           suffix={S.\bibnamedelimi Raahemi},
+           suffixi={S\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+      }
+      \strng{namehash}{1f7d646c7dcb0fb589f61d05911cad48}
+      \strng{fullhash}{1f7d646c7dcb0fb589f61d05911cad48}
+      \strng{bibnamehash}{1f7d646c7dcb0fb589f61d05911cad48}
+      \strng{authorbibnamehash}{1f7d646c7dcb0fb589f61d05911cad48}
+      \strng{authornamehash}{1f7d646c7dcb0fb589f61d05911cad48}
+      \strng{authorfullhash}{1f7d646c7dcb0fb589f61d05911cad48}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Expert Systems with Applications}
+      \field{number}{240}
+      \field{title}{Financial fraud detection using graph neural networks: A systematic review}
+      \field{year}{2024}
+      \true{nocite}
+    \endentry
+    \entry{phasedamp}{article}{}
+      \name{author}{3}{}{%
+        {{hash=6c6408e35b591448b24deac22ceb5f4a}{%
+           family={Olivera-Atencio},
+           familyi={O\bibinithyphendelim A\bibinitperiod},
+           given={María\bibnamedelima Laura},
+           giveni={M\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+        {{hash=66fe70ffd26968dc71633d3cdfaf156a}{%
+           family={Lamata},
+           familyi={L\bibinitperiod},
+           given={Lucas},
+           giveni={L\bibinitperiod}}}%
+        {{hash=7996e04409986737c007180b4819f10c}{%
+           family={Casado-Pascual},
+           familyi={C\bibinithyphendelim P\bibinitperiod},
+           given={Jesús},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{b5a1e84fce7f793e66a51a742b59a37f}
+      \strng{fullhash}{b5a1e84fce7f793e66a51a742b59a37f}
+      \strng{bibnamehash}{b5a1e84fce7f793e66a51a742b59a37f}
+      \strng{authorbibnamehash}{b5a1e84fce7f793e66a51a742b59a37f}
+      \strng{authornamehash}{b5a1e84fce7f793e66a51a742b59a37f}
+      \strng{authorfullhash}{b5a1e84fce7f793e66a51a742b59a37f}
+      \field{sortinit}{O}
+      \field{sortinithash}{2cd7140a07aea5341f9e2771efe90aae}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{quant-ph}
+      \field{eprinttype}{arXiv}
+      \field{title}{Impact of Amplitude and Phase Damping Noise on Quantum Reinforcement Learning: Challenges and Opportunities}
+      \field{year}{2025}
+      \true{nocite}
+      \verb{eprint}
+      \verb 2503.24069
+      \endverb
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/2503.24069
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/2503.24069
+      \endverb
+    \endentry
+    \entry{artgrafi}{article}{}
+      \name{author}{4}{}{%
+        {{hash=0ea9020a6c9a9cafe9ae085e1016fd80}{%
+           family={Pourhabibi},
+           familyi={P\bibinitperiod},
+           given={T.},
+           giveni={T\bibinitperiod}}}%
+        {{hash=93d784be47db36373050bfa4e8f84443}{%
+           family={Ong},
+           familyi={O\bibinitperiod},
+           given={K.-L.},
+           giveni={K\bibinithyphendelim L\bibinitperiod}}}%
+        {{hash=c0c3d8c230ac6b38fbb813a281fd5935}{%
+           family={Kam},
+           familyi={K\bibinitperiod},
+           given={B.\bibnamedelimi H.},
+           giveni={B\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+        {{hash=3dd57374705d69e70334e00a5171d980}{%
+           family={Boo},
+           familyi={B\bibinitperiod},
+           given={Y.\bibnamedelimi L.},
+           giveni={Y\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+      }
+      \strng{namehash}{668c3bed99e0177a0b663d131bea274f}
+      \strng{fullhash}{04cc3a60a5199a126d982831c3adb840}
+      \strng{bibnamehash}{668c3bed99e0177a0b663d131bea274f}
+      \strng{authorbibnamehash}{668c3bed99e0177a0b663d131bea274f}
+      \strng{authornamehash}{668c3bed99e0177a0b663d131bea274f}
+      \strng{authorfullhash}{04cc3a60a5199a126d982831c3adb840}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Decision Support Systems}
+      \field{title}{Fraud detection: A systematic literature review of graph-based anomaly detection approaches}
+      \field{volume}{133}
+      \field{year}{2020}
+      \true{nocite}
+      \field{pages}{113303}
+      \range{pages}{1}
+    \endentry
+    \entry{pmlrRuff18}{inproceedings}{}
+      \name{author}{8}{}{%
+        {{hash=002c037bd5c44a3c55a7523254ff0522}{%
+           family={Ruff},
+           familyi={R\bibinitperiod},
+           given={Lukas},
+           giveni={L\bibinitperiod}}}%
+        {{hash=1e584159c8f4d32a1e55772b4b798844}{%
+           family={Vandermeulen},
+           familyi={V\bibinitperiod},
+           given={Robert},
+           giveni={R\bibinitperiod}}}%
+        {{hash=d225927675f1b50ada7afdcd7141a590}{%
+           family={Goernitz},
+           familyi={G\bibinitperiod},
+           given={Nico},
+           giveni={N\bibinitperiod}}}%
+        {{hash=99c57c6d6c2549166bb9eb10bd8357a9}{%
+           family={Deecke},
+           familyi={D\bibinitperiod},
+           given={Lucas},
+           giveni={L\bibinitperiod}}}%
+        {{hash=74815873173614768c79b41ebcd30fb7}{%
+           family={Siddiqui},
+           familyi={S\bibinitperiod},
+           given={Shoaib\bibnamedelima Ahmed},
+           giveni={S\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=d122a2a87d21da4007f460564975e967}{%
+           family={Binder},
+           familyi={B\bibinitperiod},
+           given={Alexander},
+           giveni={A\bibinitperiod}}}%
+        {{hash=7b9bfe8c7d00cfe345c0a4b342a66761}{%
+           family={Muller},
+           familyi={M\bibinitperiod},
+           given={Emmanuel},
+           giveni={E\bibinitperiod}}}%
+        {{hash=5f7a97296025f5dcf9ed79d67caa64fc}{%
+           family={Kloft},
+           familyi={K\bibinitperiod},
+           given={Marius},
+           giveni={M\bibinitperiod}}}%
+      }
+      \name{editor}{2}{}{%
+        {{hash=dc770b9b0d58d3008bbb3906497d898c}{%
+           family={Dy},
+           familyi={D\bibinitperiod},
+           given={Jennifer},
+           giveni={J\bibinitperiod}}}%
+        {{hash=112eb0b147c4a7f674d015a86e5dea70}{%
+           family={Krause},
+           familyi={K\bibinitperiod},
+           given={Andreas},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {PMLR}%
+      }
+      \strng{namehash}{f49556d617d4a5ffe2baa6d71026cde2}
+      \strng{fullhash}{bc2514a30c9974548bca5fbf2aa4966b}
+      \strng{bibnamehash}{f49556d617d4a5ffe2baa6d71026cde2}
+      \strng{authorbibnamehash}{f49556d617d4a5ffe2baa6d71026cde2}
+      \strng{authornamehash}{f49556d617d4a5ffe2baa6d71026cde2}
+      \strng{authorfullhash}{bc2514a30c9974548bca5fbf2aa4966b}
+      \strng{editorbibnamehash}{83be554d58af5be1788b5c3616f0e92a}
+      \strng{editornamehash}{83be554d58af5be1788b5c3616f0e92a}
+      \strng{editorfullhash}{83be554d58af5be1788b5c3616f0e92a}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Despite the great advances made by deep learning in many machine learning problems, there is a relative dearth of deep learning approaches for anomaly detection. Those approaches which do exist involve networks trained to perform a task other than anomaly detection, namely generative models or compression, which are in turn adapted for use in anomaly detection; they are not trained on an anomaly detection based objective. In this paper we introduce a new anomaly detection method—Deep Support Vector Data Description—, which is trained on an anomaly detection based objective. The adaptation to the deep regime necessitates that our neural network and training procedure satisfy certain properties, which we demonstrate theoretically. We show the effectiveness of our method on MNIST and CIFAR-10 image benchmark datasets as well as on the detection of adversarial examples of GTSRB stop signs.}
+      \field{booktitle}{Proceedings of the 35th International Conference on Machine Learning}
+      \field{month}{10-15 Jul}
+      \field{series}{Proceedings of Machine Learning Research}
+      \field{title}{Deep One-Class Classification}
+      \field{volume}{80}
+      \field{year}{2018}
+      \true{nocite}
+      \field{pages}{4393\bibrangedash 4402}
+      \range{pages}{10}
+      \verb{file}
+      \verb http://proceedings.mlr.press/v80/ruff18a/ruff18a.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://proceedings.mlr.press/v80/ruff18a.html
+      \endverb
+      \verb{url}
+      \verb https://proceedings.mlr.press/v80/ruff18a.html
+      \endverb
+    \endentry
+    \entry{artNISQ}{article}{}
+      \name{author}{3}{}{%
+        {{hash=962930c2e16566c1060ca72340baa573}{%
+           family={Umeda},
+           familyi={U\bibinitperiod},
+           given={Y.},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=93d99572be44a541d8dda708bc103bbf}{%
+           family={Kaneko},
+           familyi={K\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod}}}%
+        {{hash=8e43f4794206376e7902339cb721b645}{%
+           family={Kikuchi},
+           familyi={K\bibinitperiod},
+           given={H.},
+           giveni={H\bibinitperiod}}}%
+      }
+      \strng{namehash}{c31f21d009e971be5b717220ca5d9289}
+      \strng{fullhash}{c31f21d009e971be5b717220ca5d9289}
+      \strng{bibnamehash}{c31f21d009e971be5b717220ca5d9289}
+      \strng{authorbibnamehash}{c31f21d009e971be5b717220ca5d9289}
+      \strng{authornamehash}{c31f21d009e971be5b717220ca5d9289}
+      \strng{authorfullhash}{c31f21d009e971be5b717220ca5d9289}
+      \field{sortinit}{U}
+      \field{sortinithash}{6901a00e45705986ee5e7ca9fd39adca}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Fujitsu Scientific and Technical Journal}
+      \field{number}{55}
+      \field{title}{Topological data analysis and its application to time-series data analysis}
+      \field{year}{2019}
+      \true{nocite}
+      \field{pages}{65\bibrangedash 71}
+      \range{pages}{7}
+    \endentry
+    \entry{momentum}{article}{}
+      \name{author}{3}{}{%
+        {{hash=8dcbb8de420f3fe196cccab75ff4dd1b}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Xingbao},
+           giveni={X\bibinitperiod}}}%
+        {{hash=be6f1b6df7f1ddfafad18806238fa391}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={Wei},
+           giveni={W\bibinitperiod}}}%
+        {{hash=ba51490fdfee4e053d199f28e82dad4f}{%
+           family={Zhao},
+           familyi={Z\bibinitperiod},
+           given={Yue},
+           giveni={Y\bibinitperiod}}}%
+      }
+      \strng{namehash}{b52df74bd7bb70a5427debb94c9b1f9d}
+      \strng{fullhash}{b52df74bd7bb70a5427debb94c9b1f9d}
+      \strng{bibnamehash}{b52df74bd7bb70a5427debb94c9b1f9d}
+      \strng{authorbibnamehash}{b52df74bd7bb70a5427debb94c9b1f9d}
+      \strng{authornamehash}{b52df74bd7bb70a5427debb94c9b1f9d}
+      \strng{authorfullhash}{b52df74bd7bb70a5427debb94c9b1f9d}
+      \field{sortinit}{Z}
+      \field{sortinithash}{96892c0b0a36bb8557c40c49813d48b3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2022 4th International Conference on Data-driven Optimization of Complex Systems (DOCS)}
+      \field{title}{One-class Anomaly Detection with Redundancy Reduction and Momentum Mechanism}
+      \field{year}{2022}
+      \true{nocite}
+      \field{pages}{1\bibrangedash 6}
+      \range{pages}{6}
+      \verb{doi}
+      \verb 10.1109/DOCS55193.2022.9967719
+      \endverb
+      \keyw{Training;Correlation;Redundancy;Support vector machine classification;Feature extraction;Robustness;Task analysis;anomaly detection;redundancy reduction;momentum mechanism;one-class classification}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

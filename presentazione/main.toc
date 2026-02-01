@@ -1,0 +1,7 @@
+\babel@toc {italian}{}\relax 
+\babel@toc {italian}{}\relax 
+\beamer@sectionintoc {1}{Introduzione}{2}{0}{1}
+\beamer@sectionintoc {2}{Modellazione Quantistica del Grafo}{7}{0}{2}
+\beamer@sectionintoc {3}{Variational Quantum Graph Convolution}{12}{0}{3}
+\beamer@sectionintoc {4}{Dettagli Implementativi e Training}{22}{0}{4}
+\beamer@sectionintoc {5}{Analisi Sperimentale e Conclusioni}{26}{0}{5}

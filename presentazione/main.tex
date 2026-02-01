@@ -1,0 +1,444 @@
+\documentclass[aspectratio=169, t]{beamer} % Opzione 't' per allineare tutto in alto
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[italian]{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{graphicx}
+\usepackage{braket}
+\usepackage{booktabs}
+
+% Configurazione Bibliografia
+\usepackage[backend=biber, style=numeric]{biblatex}
+\addbibresource{references.bib}
+
+% --- CONFIGURAZIONE VISIVA IBRIDA ---
+\usecolortheme{dove} % Base colori minimal (bianco/nero)
+\useinnertheme{rounded} % Forme arrotondate per i blocchi
+
+% Rimuove i simboli di navigazione
+\setbeamertemplate{navigation symbols}{}
+
+% --- COLORI PERSONALIZZATI ---
+\definecolor{UniBlue}{RGB}{0, 51, 102}    % Blu scuro istituzionale
+\definecolor{LightBlue}{RGB}{235, 240, 255} % Blu molto chiaro per sfondo blocchi
+
+\setbeamercolor{structure}{fg=UniBlue}
+\setbeamercolor{normal text}{fg=black}
+\setbeamercolor{frametitle}{fg=UniBlue, bg=white}
+
+% --- PERSONALIZZAZIONE BLOCCHI (RETTANGOLI ATTIVI) ---
+\setbeamertemplate{blocks}[rounded][shadow=true]
+\setbeamercolor{block title}{bg=UniBlue, fg=white}
+\setbeamercolor{block body}{bg=LightBlue, fg=black}
+\setbeamerfont{block title}{series=\bfseries}
+
+% --- PERSONALIZZAZIONE TITOLI SLIDE (BARRA CENTRATA) ---
+\setbeamertemplate{frametitle}{%
+    \vspace{0.2cm} % Ridotto spazio verticale
+    \begin{centering}
+        \textbf{\insertframetitle}
+        \par\vspace{0.1cm}
+        \makebox[\textwidth][c]{\rule{0.9\textwidth}{0.4pt}} % Linea centrata
+    \end{centering}
+}
+
+% --- PERSONALIZZAZIONE PAGINA SEZIONE (MINIMAL, NO RETTANGOLI) ---
+\setbeamertemplate{section page}{
+    \centering
+    \vspace{2.5cm} % Spazio per centrare visivamente il titolo sezione
+    \huge\bfseries\textcolor{UniBlue}{\insertsection}
+    \par
+}
+
+% Font
+\usefonttheme{serif}
+
+% Metadati
+\title[QTGNN]{Quantum Topological Graph Neural Networks \\ per il Rilevamento di Anomalie Finanziarie}
+\subtitle{Analisi, Implementazione e Valutazione su Dispositivi NISQ}
+\author[M. Papa]{Martino Papa}
+\institute[UniFi]{
+  Università degli Studi di Firenze \\
+  \medskip
+}
+\date{\today}
+
+\begin{document}
+
+% -------------------------------------------------------------------------
+% Frontespizio e Indice
+% -------------------------------------------------------------------------
+\begin{frame}
+  \titlepage
+\end{frame}
+
+% -------------------------------------------------------------------------
+% Sezione 1: Introduzione
+% -------------------------------------------------------------------------
+\section{Introduzione}
+\begin{frame}
+  \sectionpage
+\end{frame}
+
+\begin{frame}{Rilevamento di frodi finanziarie}  
+  Le frodi finanziarie moderne sono difficili da identificare, caratterizzate da:
+  \begin{itemize}
+      \item \textbf{Transazioni complesse:} Schemi di riciclaggio che coinvolgono decine di conti.
+      \item \textbf{Pattern nascosti:} Anomalie topologiche invisibili alle analisi statistiche standard.
+  \end{itemize}
+
+  \vspace{0.5cm}
+  Lo standard attuale è rappresentato dalle \textbf{Graph Neural Network (GNN)}, modelli di deep learning geometrico capaci di elaborare dati strutturati a grafo.
+\end{frame}
+
+\begin{frame}{Modellazione dei Dati}
+  \begin{block}{Transaction Graph}
+  Definiamo il grafo delle transazioni finanziarie come $G = (V, E)$ con $|V| = N$, dove:
+  \begin{itemize}
+    \item \textbf{Nodi ($v \in V$):} Rappresentano i conti bancari.
+    \item \textbf{Archi pesati ($(u, v) \in E$):} Rappresentano il flusso di denaro aggregato:
+    \[ w_{uv} \doteq \sum_{t \in T_{uv}} \text{amount}(t) \]
+    \item Ogni nodo possiede uno stato interno ($\alpha_i$) normalizzato sul grado totale del grafo.
+  \end{itemize}
+  \end{block}
+\end{frame}
+
+\begin{frame}{Limiti dello Stato dell'Arte (GNN)}
+  Nonostante l'efficacia, le GNN classiche presentano criticità strutturali:
+  
+  \begin{enumerate}
+    \item \textbf{Visione Locale:} Tendenza ad uniformare le feature dei nodi distanti, perdendo informazioni su cicli o pattern a lungo raggio.
+    \item \textbf{Black-box:} La natura delle reti neurali contrasta con le normative finanziarie (GDPR/AI Act) che richiedono spiegabilità.
+    \item \textbf{Onerosità:} L'addestramento richiede enormi moli di dati etichettati e risorse computazionali elevate.
+  \end{enumerate}
+\end{frame}
+
+\begin{frame}{La Proposta: Architettura QTGNN}
+  Si propone l'utilizzo di una \textbf{Quantum Topological Graph Neural Network (QTGNN)}, un'architettura ibrida che integra:
+  
+  \begin{itemize}
+    \item \textbf{GNN:} Per la modellazione delle relazioni locali.
+    \item \textbf{TDA (Topological Data Analysis):} Per l'estrazione di invarianti globali robusti (Numeri di Betti) che garantiscono stabilità al rumore.
+    \item \textbf{QML (Quantum Machine Learning):} Per un embedding efficente e per catturare correlazioni non lineari tramite entanglement.
+  \end{itemize}
+\end{frame}
+
+% =========================================================================
+% SEZIONE 2: Encoding e Struttura
+% =========================================================================
+\section{Modellazione Quantistica del Grafo}
+\begin{frame}
+  \sectionpage
+\end{frame}
+
+\begin{frame}{Generalized Amplitude Encoding (GAES)}
+  Per codificare la struttura del grafo $G=(V,E)$ in uno stato quantistico, si adotta una variante dell'\textit{Amplitude Encoding} arricchita da \textit{Entanglement Seeding}.
+  
+  Lo stato target $\ket{\psi_{G}}$ è mappa la matrice di adiacenza, ed è definito:
+  \[
+  \ket{\psi_{G}} = \frac{1}{\sqrt{Z}} \sum_{i,j} A_{ij} \mathcal{E}_{ij}(\theta_{e}) \ket{i}\ket{j}
+  \]
+  L'obiettivo è mappare le relazioni pesate del grafo direttamente nell'entanglement tra qubit.
+\end{frame}
+
+\begin{frame}{Entanglement Seeding ($\mathcal{E}_{ij}$)}
+  L'informazione sugli archi è codificata tramite l'operatore di entanglement $\mathcal{E}_{ij}$, che agisce tra i qubit del registro sorgente e quelli di ambiente.
+
+  \[
+  \mathcal{E}_{ij}(\theta_{e}) \doteq \exp(-i\theta_{e}\sigma_{i}^{x}\sigma_{j}^{x})
+  \]
+  
+  Dove:
+  \begin{itemize}
+      \item $\theta_e$: Parametro addestrabile che modula l'intensità dell'interazione.
+      \item $\sigma^x$: X-Gate che creano correlazioni non classiche.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Matrice di Interazione $A_{ij}$}
+  Il tensore $A_{ij}$ unifica le informazioni topologiche e le feature dei nodi.
+  \[
+  A_{ij} \doteq \begin{cases} 
+      w_{ij} & \text{se } i \neq j \quad (\text{Peso cumulativo transazioni}) \\
+      \alpha_{i} & \text{se } i = j \quad (\text{Centralità di grado normalizzata})
+   \end{cases}
+  \]
+  Dove $\alpha_i = \frac{\text{deg}(i)}{\sum_k \text{deg}(k)}$. Questo permette di processare simultaneamente flussi e importanza dei nodi.
+\end{frame}
+
+\begin{frame}{Matrice Densità Ridotta}
+  Dallo stato puro $\ket{\psi_{G}}$, ricaviamo la matrice di densità ridotta \(\rho_G\):
+      \[ \rho_{total} = \ket{\psi_{G}}\bra{\psi_{G}}\]
+      \[ \rho_{G} = Tr_{env}(\rho_{total}) \doteq \sum_{m \in env} (\mathbb{I} \otimes \bra{m}) \rho_{total} (\mathbb{I} \otimes \ket{m})\]
+
+  $\rho_G$ incapsula le proprietà topologiche del grafo in uno stato misto di dimensione ridotta ($n$ qubit). 
+
+  % rho_G descrive il sistema "utile" come se l'ancilla fosse parte di un ambiente esterno che ha interagito con esso e poi è stato perso
+  % È l'equivalente quantistico del calcolare una distribuzione di probabilità marginale 
+\end{frame}
+
+% =========================================================================
+% SEZIONE 3: Dinamica e Feature Extraction
+% =========================================================================
+\section{Variational Quantum Graph Convolution}
+\begin{frame}
+  \sectionpage
+\end{frame}
+
+\begin{frame}{Evoluzione variazionale del grafo}
+Si utilizzano circuiti quantistici paramtetrizzati per evolvere lo stato $\rho_G$ attraverso $L$ layer di convoluzione quantistica variazionale (VQGC).
+\begin{block}{Definizione ricorsiva}
+  \[
+\rho^{(0)} = \rho_{G}
+\]
+
+\[
+\rho^{(l+1)} = \mathcal{N}_{\theta}^{(l)} \left( U_{\theta}^{(l)} \rho^{(l)} U_{\theta}^{(l)\dagger} \right)
+\]
+\end{block}
+\end{frame}
+
+\begin{frame}{Definizione dell'operatore unitario}
+  % Allo stato quantistico si applica l'operatore unitario $U_{\theta}^{(l)}$
+  \begin{block}{Operatore di Evoluzione Unitaria}
+  \[
+  U_{\theta}^{(l)} = \exp\left(-i\sum_{(i,j)\in E}\theta_{ij}^{(l)}H_{ij} -i\sum_{i\in V}\phi_{i}^{(l)}\sigma_{i}^{z} -i\sum_{(i,j,k)\in\Delta}\psi_{ijk}^{(l)}\sigma_{i}^{z}\sigma_{j}^{z}\sigma_{k}^{z}\right)
+  \]
+  \begin{itemize}
+      \item $\theta_{ij}^{(l)}$: Dinamica sulle connessioni dirette (Archi).
+      \item $\phi_{i}^{(l)}$: Dinamica specifica del conto (Nodi).
+      \item $\psi_{ijk}^{(l)}$: Interazioni multi-partito su strutture triangolari
+      % fondamentali per rilevare frodi complesse.
+  \end{itemize}
+  \end{block} 
+\end{frame}
+
+\begin{frame}{Phase Damping}
+  Per introdurre non-linearità, si applica inoltre un canale di dephasing:
+  \begin{block}{Dephasing mediante operatori di Kraus}
+  \[
+  \mathcal{N}_{\theta}^{(l)}(\rho) = \sum_{k} p_{k}(\theta) \Pi_{k} \rho \Pi_{k}
+  \]
+  Con operatori di Kraus: $\quad \Pi_{0} = I = \begin{pmatrix}1 & 0\\ 0 & 1\end{pmatrix}, \quad \Pi_{1} = \sigma^{z} = \begin{pmatrix}1 & 0\\ 0 & -1\end{pmatrix}$
+  
+  E probabilità associate:  \(
+  p_{0}(\theta) = \frac{e^{\theta_{0}}}{e^{\theta_{0}} + e^{\theta_{1}}}, \quad p_{1}(\theta) = \frac{e^{\theta_{1}}}{e^{\theta_{0}} + e^{\theta_{1}}}
+  \)
+
+  Il parametro $\theta$ controlla l'intensità del rumore modulando la preservazione delle coerenze quantistiche.
+\end{block}
+\end{frame}
+
+\begin{frame}{Quantum Feature Embedding ($Z_Q$)}
+  Al termine dei layer variazionali, si ottiene uno stato che codifica le feature del grafo.
+  
+  \begin{block}{Embedding Finale}
+  Lo stato finale $Z_Q$ dopo $L$ layer di convoluzione quantistica è definito come:
+  \[
+  Z_{Q} = Tr_{anc}\left( \prod_{l=1}^{L} \mathcal{N}_{\theta}^{(l)}(U_{\theta}^{(l)}\rho^{(l)}U_{\theta}^{(l)\dagger}) \right)
+  \]
+  \end{block}
+\end{frame}
+
+\begin{frame}{Entropia di Correlazione ($C_Q$)}
+  Si calcola l'Entropia di Correlazione Quantistica per catturare le interazioni multi-partito.
+  \begin{block}{Entropia di Correlazione}
+  \[
+  C_{Q} = \sum_{i \ne j} Tr\left( \rho_{ij}^{(L)} \log \rho_{ij}^{(L)} - \rho_{i}^{(L)} \log \rho_{i}^{(L)} - \rho_{j}^{(L)} \log \rho_{j}^{(L)} \right)
+  \]
+  \end{block} 
+  Valori elevati di $C_Q$ indicano strutture di entanglement complesse, spesso correlate ad anomalie organizzate.
+\end{frame}
+
+\begin{frame}{Analisi Topologica Persistente (TDA)}
+  Sulla matrice densità finale $\rho^{(L)}$ viene costruita una metrica di distanza quantistica $d_{\rho}(i,j)$. Tramite filtrazione di Vietoris-Rips, si estraggono gli invarianti topologici:
+  
+  \begin{itemize}
+      \item \textbf{Numeri di Betti $\beta_k$:} Conteggio di componenti connesse ($\beta_0$), cicli ($\beta_1$) e cavità ($\beta_2$).
+      \item \textbf{Caratteristica di Eulero Persistente $\chi^Q$:}
+      \[ \chi^{Q}(\epsilon) = \sum_{k} (-1)^{k} \beta_{k}^{Q}(\epsilon) \]
+  \end{itemize}
+  
+  Tali invarianti offrono una "firma digitale" della forma globale del grafo.
+\end{frame}
+
+\begin{frame}{Classificatore Ibrido}
+  Le feature quantistiche estratte vengono concatenate in un vettore:
+  \[
+  \phi(G) = \left[Z_{Q}, C_{Q}, \{\beta_{i}^{Q}\}, \chi^{Q} \right]
+  \]  
+  Il modello viene addestrato minimizzando una funzione di costo ibrida:
+  \[
+  \mathcal{L} = \mathcal{L}_{\text{sup}}(\hat{y}, y) + \lambda_{1} \min_{m \in \mathcal{M}} ||\phi(G) - m||^{2} + \lambda_{2}||\Theta||^2
+  \]
+\end{frame}
+
+\begin{frame}{Definizione della Loss supervisionata}
+  Il vettore \(\phi(G)\) è dato in input ad un classificatore classico che stima la probabilità di frode $\hat{y}$:
+  \[
+  \hat{y} = \sigma(\mathbf{W}^{\top}\phi(G) + b)
+  \]
+  La loss supervisionata è definita come la Binary Cross-Entropy tra la previsione e l'etichetta reale $y$:
+  \[
+  \mathcal{L}_{\text{sup}}(\hat{y}, y) = -\left[ y \log(\hat{y}) + (1 - y) \log(1 - \hat{y}) \right]
+  \]
+  % la loss nella pratica è stato pesata per bilanciare le classi
+\end{frame}
+
+\begin{frame}{Classificazione Finale}
+  Una volta allenato il modello la classificazione finale di un grafo \(G\) avviene calcolando un punteggio di anomalia:
+  $$s(G) = \min_{\phi(G^{*}) \in S_{normal}} ||\phi(G) - \phi(G^{*})||_{2}^{2}$$
+  Dove \(S_{normal}\) è l'insieme delle feature di grafi etichettati come normali presi da un validation set.
+
+  La decisione finale è basata su una soglia \(\tau\):
+  $$Fraud(G) = \begin{cases} 
+1 (\text{Frode}) & \text{se } s(G) > \tau \\
+0 (\text{Normale}) & \text{altrimenti}
+\end{cases}$$
+\end{frame}
+
+% =========================================================================
+% SEZIONE 4: Implementazione
+% =========================================================================
+\section{Dettagli Implementativi e Training}
+\begin{frame}
+  \sectionpage
+\end{frame}
+
+\begin{frame}
+  % L'algoritmo è implementato in ambiente ibrido \textbf{PyTorch + PennyLane}.
+  \begin{block}{Iperparametri}
+  \centering
+  \small
+  \begin{tabular}{lc}
+    \toprule
+    \textbf{Parametro} & \textbf{Valore} \\
+    \midrule
+    Nodi per Sottografo ($N$) & 16 \\
+    Qubit Totali ($2 \cdot \log_2 N$) & 8 \\
+    Dimensione Training Set & 700 \\
+    Dimensione Test Set & 100 \\ 
+    \midrule
+    Layer VQGC ($L$) & 3 \\
+    Numeri di Betti Calcolati & Fino a $\beta_1$ (Cicli) \\
+    \midrule
+    Epochs & 20 \\
+    Learning Rate & 0.005 \\
+    Lambda Loss ($\lambda_1, \lambda_2$) & 0.1, 0.01 \\
+    Dimensione Memory Bank ($K$) & 10 \\
+    \midrule
+    Soglia Anomalia ($\tau$) & 0.4 \\
+    Dimensione \(S_\text{normal}\) & 10 \\
+    \bottomrule
+  \end{tabular}
+  \end{block}
+\end{frame}
+
+\begin{frame}{L'ambigua definizione di $S_{normal}$}
+  \begin{block}{Problema}
+    \(S_\text{normal}\) va utilizzato sia durante il training (loss) che durante l'inferenza (classificazione). Nel paper originale \(S_\text{normal}\) è richiesto in input e definito come:
+    \[
+      (\phi(G_1), \phi(G_2), \dots, \phi(G_K)), \; \text{dove } G_i \text{ sono grafi leciti}
+    \]
+    Tuttavia, questa scelta presenta un'enorme criticità:
+    \begin{center}
+       Non è possibile conoscere \(\phi(G)\) prima della fase di training.
+    \end{center}
+    \vspace{0.1cm}
+  \end{block}
+
+\end{frame}
+
+\begin{frame}{Soluzione Proposta: Memory Bank Dinamica}
+  In fase di training si utilizza una \textbf{Memory Bank} dinamica:
+  \[
+  S_{normal} \equiv \mathcal{M}^{(t)} = \{ m_1, m_2, \dots, m_K \}
+  \]
+  \begin{enumerate}
+      \item \textbf{Inizializzazione:} \(\mathcal{M}^{(0)}\) è popolato con \(\{\phi(G_i)\}_{i=1}^{K}\), t.c. \(G_i\) leciti.
+      \item \textbf{Aggiornamento:} Utilizzando una politica FIFO ad ogni iterazione di Stochastic Gradient Descent si aggiorna una parte della Memory Bank.
+  \end{enumerate}
+  Un primo tentativo basato su “\textit{Deep One-Class Classification}” si è rilevato inadeguato poichè l'assunzione che i dati leciti fossero contenuti in un'ipersfera si è rivelata falsa. 
+\end{frame}
+
+% =========================================================================
+% SEZIONE 5: ANALISI SPERIMENTALE E CONCLUSIONI
+% =========================================================================
+\section{Analisi Sperimentale e Conclusioni}
+\begin{frame}
+  \sectionpage
+\end{frame}
+
+\begin{frame}{Dataset PaySim}
+  L'algoritmo è stato testato sul dataset sintetico \textbf{PaySim}. Un'analisi preliminare (script \texttt{calculate\_density.py}) ha evidenziato gravi limitazioni strutturali:
+  
+  \begin{itemize}
+      \item \textbf{Sparsitá:} Il 94.83\% dei nodi possiede grado 1. Solo il 5.17\% ha grado $\ge 2$.
+      \item \textbf{Assenza di Cicli:} Anche isolando le componenti debolmente connesse più grandi, i cicli e le strutture complesse sono rarissimi.
+  \end{itemize}
+  
+  \textbf{Impatto:} Questa topologia “piatta” invalida parzialmente l'efficacia del modello, che si basa sull'identificazione di strutture topologiche complesse.
+  % Nel paper originale si dice che si usa un dataset simile a PaySim, evidentemente sono state fatte qualche modifiche
+\end{frame}
+
+\begin{frame}{Risultati Sperimentali e Analisi di $\Phi(G)$}
+  \footnotesize
+  \textbf{Metriche Finali:} Accuracy: 70.0\% \quad (TP=3, FP=0, TN=84, FN=13)
+  
+  \vspace{0.2cm}
+  
+  \textbf{1. Strutture Topologiche Simili (Falsi Negativi)}
+  \vspace{0.1cm}
+  \begin{beamercolorbox}[sep=4pt, rounded=true, shadow=false, wd=\textwidth]{block body}
+  \tiny
+  \textbf{Graph 117 | NORMAL | Score: 0.000000 | Pred: 0} \\
+  $\Phi(117) = [0.1628, 2.1829, 1.0, 0.0, 0.0, 1.0, 1.0, 0.0, 0.0, 1.0, 0.0625, 1.0625, 0.0, -1.0]$ \\
+  \vspace{0.05cm}
+  \textbf{Graph 002 | FRAUD \hspace{0.15cm}| Score: 0.000009 | Pred: 0} \\
+  $\Phi(002) = [0.1641, 2.1785, 1.0, 0.0, 0.0, 1.0, 1.0, 0.0, 0.0, 1.0, 0.0625, 1.0625, 0.0, -1.0]$
+  \end{beamercolorbox}
+
+  \vspace{0.2cm}
+
+  \textbf{2 Variazioni Topologiche (Rilevamento Efficace)}
+  \vspace{0.1cm}
+  \begin{beamercolorbox}[sep=4pt, rounded=true, shadow=false, wd=\textwidth]{block body}
+  \tiny
+  \textbf{Graph 068 | FRAUD | Score: 0.406291 | Pred: 1} \\
+  $\Phi(068) = [0.1571, 2.1855, 1.0, 0.0, 0.0, 1.0, 1.0, 0.0, 0.0, 1.0, \mathbf{0.1875, 0.6875, 0.0, -0.50}]$ \\
+  \vspace{0.05cm}
+  \textbf{Graph 016 | FRAUD | Score: 2.115981 | Pred: 1} \\
+  $\Phi(016) = [0.1239, 2.3273, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 0.0, 1.0, \mathbf{0.3125, 0.1875, 0.0, 0.1250}]$
+  \end{beamercolorbox}
+\end{frame}
+
+\begin{frame}{Considerazioni Finali}
+  \begin{block}{Conclusioni}
+  Sebbene la natura sintetica e semplice di PaySim non abbia permesso di sfruttare appieno il potenziale del modello, l'esperimento dimostra che:
+  \begin{enumerate}
+      \item L'architettura ibrida stima correttamente i Numeri di Betti e la Caratteristica di Eulero.
+      \item La Memory Bank stabilizza l'apprendimento evitando il collasso su un centro inesatto.
+      \item L'algoritmo possiede un alto potenziale per scenari reali (non sintetici), dove le frodi si manifestano attraverso strutture topologiche complesse (es. anelli di riciclaggio).
+  \end{enumerate}
+  \end{block}
+\end{frame}
+
+\begin{frame}
+  \centering
+  \vspace{2cm}
+  \Huge\bfseries\textcolor{UniBlue}{Grazie per l'attenzione}
+  \par
+\end{frame}
+
+% -------------------------------------------------------------------------
+% Bibliografia
+% -------------------------------------------------------------------------
+\section*{Riferimenti}
+
+\begin{frame}[allowframebreaks]{Riferimenti Bibliografici}
+  \nocite{*}
+  \printbibliography
+\end{frame}
+
+\end{document}

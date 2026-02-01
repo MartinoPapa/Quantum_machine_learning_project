@@ -1,11 +1,11 @@
 # Fdb version 4
-["biber main"] 1768391953 "main.bcf" "main.bbl" "main" 1768498551 0
-  "main.bcf" 1768498551 108019 31f7932f18cb497959031dc41952f6fa "pdflatex"
+["biber main"] 1768391953 "main.bcf" "main.bbl" "main" 1768756701 0
+  "main.bcf" 1768756701 108019 31f7932f18cb497959031dc41952f6fa "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1768498549 "c:/Users/marti/Desktop/Magistrale/secondo anno/quantum machine learning/QUANTUM TOPOLOGICAL GRAPH NEURAL NETWORKS/tex/main.tex" "main.pdf" "main" 1768498551 0
+["pdflatex"] 1768756699 "c:/Users/marti/Desktop/Magistrale/secondo anno/quantum machine learning/QUANTUM TOPOLOGICAL GRAPH NEURAL NETWORKS/tex/main.tex" "main.pdf" "main" 1768756701 0
   "c:/Users/marti/Desktop/Magistrale/secondo anno/quantum machine learning/QUANTUM TOPOLOGICAL GRAPH NEURAL NETWORKS/tex/main.tex" 1768498547 31588 617c45cf09dd0ead9030b417feda2d8e ""
   "c:/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1671536561 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "c:/texlive/2022/texmf-dist/fonts/map/fontname/texfonts.map" 1671540619 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -102,9 +102,9 @@
   "c:/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1671551069 4662777 837fc06352b6a5cd3cf3decdf5e7dab2 ""
   "c:/texlive/2022/texmf-var/web2c/pdftex/pdflatex.fmt" 1671551334 7874744 56947912965ca17ee5dd31540707f3ae ""
   "c:/texlive/2022/texmf.cnf" 1671551034 713 baa45e065482d44c4cd81b98ef72c63b ""
-  "main.aux" 1768498551 3264 f103ad628ada282aa71a20278cbfe3ac "pdflatex"
+  "main.aux" 1768756701 3264 f103ad628ada282aa71a20278cbfe3ac "pdflatex"
   "main.bbl" 1768391956 19834 1db687c1853dd8e88781d2669482d869 "biber main"
-  "main.run.xml" 1768498551 2305 52095dfad395b381e9a32937e764a41c "pdflatex"
+  "main.run.xml" 1768756701 2305 52095dfad395b381e9a32937e764a41c "pdflatex"
   (generated)
   "main.aux"
   "main.bcf"
