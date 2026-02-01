@@ -57,7 +57,7 @@ def find_pool_of_components(csv_file, output_file="pool_nodes.pkl", min_componen
         nodes_in_comp = all_nodes[component_indices]
         
         valid_nodes_set.update(nodes_in_comp)
-        components_found += 1
+        components_found += 1 
         
         if components_found <= 10: # Print first 10
             print(f"Rank #{components_found}: {size} nodes")
